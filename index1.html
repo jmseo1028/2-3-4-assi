@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>기무치</title>
+
+    <style>
+        .a:hover { background-color: #061ef7; }
+        .b:hover { background-color: #5465fc; }
+        .c:hover { background-color: #e66b23; }
+        .d:hover { background-color: #f70606; }
+    
+        .table {
+            margin: 30px 0;
+            z-index: 30;
+            position: relative;
+            border-spacing: 15px;
+        }
+    
+        .food {
+            background-color: aqua;
+            display: flex;
+            justify-content: space-around;
+            margin: 30px;
+            height: 200px;
+            width: 100%;
+            padding: 25px;
+        }
+    
+        .gimchi {
+            flex-grow: 1;
+            background-color: #ff0000;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .gimchi:hover {
+            background-color: #7b0505;
+        }
+    
+        .canchamchii {
+            flex-grow: 2;
+            background-color: #0a83f4;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .canchamchii:hover {
+            background-color: #061ef7;
+        }
+    
+        .gogi {
+            flex-grow: 4;
+            background-color: #c0661190;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .gogi:hover {
+            background-color: #753d08;
+        }
+    
+        .water {
+            flex-grow: 1;
+            background-color: #ec76cd;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .water:hover {
+            background-color: #d1019a;
+        }
+    
+        #come {
+            text-align: center;
+            z-index: 0.2;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            color: blanchedalmond;
+            background-color: rgba(255, 0, 0, 0.5);
+            padding: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border: 4px solid #fff;
+            border-radius: 25px;
+        }
+    
+        #come:hover {
+            background-color: rgb(250, 0, 0);
+            border: 10px solid #0a83f4;
+            color: white;
+            z-index: 0;
+        }
+    
+        #come:hover:before {
+            content: "랭킹닷컴! 클릭";
+            display: block;
+            color: #000000;
+            font-size: 26px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    
+        .new-gimchi {
+            flex-grow: 1;
+            background-color: #ff5733;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .new-gimchi:hover {
+            background-color: #f30202;
+        }
+    
+        .new-canchamchii {
+            flex-grow: 2;
+            background-color: #ffcd1f;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .new-canchamchii:hover {
+            background-color: #ff8902;
+        }
+    
+        .new-gogi {
+            flex-grow: 4;
+            background-color: #009933;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .new-gogi:hover {
+            background-color: #07401b;
+        }
+    
+        .new-water {
+            flex-grow: 1;
+            background-color: #fc5c5c;
+            margin: 10px;
+            padding: 30px;
+            border: 3px solid #fff;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+        .new-water:hover {
+            background-color: #410404;
+        }
+    
+        .foodd {
+            background-color: rgba(47, 66, 235, 0.9);
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px;
+            height: 200px;
+            width: 100%;
+            padding: 30px;
+        }
+    
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto&display=swap');
+    
+        h5, h3, h1 {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+    
+</head>
+<body>
+    <h5>맛있는</h5>
+    <hr>
+    <h3><p>반찬과</p></h3>
+    <hr> 
+    <h1><p>채소</p></h1>
+    <hr>
+
+    <table width="100%" height="100px">
+        <tr>
+            <td class="a" bgcolor="#ff0000" style="text-align: center; vertical-align: middle;">김치</td>
+            <td class="b" bgcolor="#ffa500" style="text-align: center; vertical-align: middle;">깍두기</td>
+        </tr>
+        <tr>
+            <td class="c" bgcolor="00ff00" style="text-align: center; vertical-align: middle;">상치</td>
+            <td class="d" bgcolor="00b700" style="text-align: center; vertical-align: middle;">꺷잎</td>
+        </tr>
+    </table>
+    
+
+    <div class="food">
+        <div id="go" class="gimchi" onclick="test()">gimchi</div>
+        <div id="co" class="canchamchii">chamchi</div>
+        <div id="kk" class="gogi">gogi</div>
+        <div id="n" class="water">water</div>
+    </div>
+    <div class="foodd">
+        <div id="문어" class="gimchi new-gimchi">문어</div>
+        <div id="오징어"class="canchamchii new-canchamchii">오징어</div>
+        <div id="momo" class="gogi new-gogi">가오리</div>
+        <div id="몰라" class="water new-water">거북이</div>
+    </div>
+    <a href="https://www.rankingdak.com/?utm_source=google&utm_medium=pmax&utm_campaign=performance&utm_content=2502_new&utm_term=purchase&gad_source=1&gclid=CjwKCAjw-qi_BhBxEiwAkxvbkJojDu3luXLY4jzRfOiX1OtPvwPGFi7LzCwtV8GIQIbBh6Ih-C7ouxoCCPEQAvD_BwE" target="_blank">
+        <div id="come">best = chicken breathe</div>
+    </a>
+    <script>
+        alert("어떤 음식들이 있을까 ?????");
+
+         window.onload = function () {
+      
+let kk = document.getElementById("kk");
+kk.addEventListener("click", (e)=> {
+    kk.innerHTML="미트볼";
+    alert("단백질");
+});  
+
+let n = document.getElementById("n");
+n.addEventListener("click", (e)=> {
+    n.innerHTML="맛없지만 필수";
+});
+let 몰라 = document.getElementById("몰라");
+몰라.addEventListener("click",channge몰라text);
+
+
+let 몰라text= ["느려터졌음","맛도없음"]
+function channge몰라text(){
+    let 몰라= document.getElementById("몰라");
+    let num = parseInt(Math.random()* 2);
+    몰라.innerHTML = 몰라text[num];
+}
+
+
+       
+            let go = document.getElementById("go");
+            go.addEventListener("click", () => {
+                alert("한국인의 매운맛이다!!!!!.");
+            });
+        
+            let co = document.getElementById("co");
+            co.addEventListener("click", () => {
+                alert("펄떡펄떡~");
+            });
+        
+            let momo = document.getElementById("momo");
+            momo.addEventListener("click", changetext);
+        
+        let 문어 = document.getElementById("문어");
+        문어.addEventListener("click",change문어text);
+
+        let 오징어 = document.getElementById("오징어");
+        오징어.addEventListener("click",changesotext);
+        };
+        
+        let texts = ["치킨", "칠면조", "악어고기", "돼지고기", "소고기"];
+        function changetext() {
+            let momo = document.getElementById("momo");
+            let num = parseInt(Math.random() * texts.length);
+            momo.innerHTML = texts[num];
+        }
+
+        let octotexts = ["다리가8개", "초장", "간장", "와사비"]
+        function change문어text() {
+            let 문어 = document.getElementById("문어");
+            let num = parseInt(Math.random()* 4);
+            문어.innerHTML = octotexts[num];}
+            
+            let sotexts=["다리가10개", "문어보다 작음", "부드러움"]
+            function changesotext(){
+                let 오징어 = document.getElementById("오징어");
+                let num = parseInt(Math.random() * 3);
+          오징어.innerHTML=sotexts[num];
+            }
+        
+
+        </script>
+        
+    
+
+</body>
+</html>
